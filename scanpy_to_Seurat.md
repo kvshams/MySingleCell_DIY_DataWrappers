@@ -51,6 +51,7 @@ colnames(embedding) <- c("umap_1", "umap_2")
 seurat[["umap"]] <- CreateDimReducObject(embedding, key = "umap_")
 seurat
 ```
+```
 An object of class Seurat 
 30983 features across 21391 samples within 1 assay 
 Active assay: RNA (30983 features, 0 variable features)
