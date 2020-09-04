@@ -49,6 +49,7 @@ embedding <- adata$obsm["X_umap"]
 rownames(embedding) <- adata$obs_names$to_list()
 colnames(embedding) <- c("umap_1", "umap_2")
 seurat[["umap"]] <- CreateDimReducObject(embedding, key = "umap_")
+seurat <- SetIdent(seurat, value = "leiden_res_0.5")
 seurat
 ```
 ```
@@ -57,3 +58,5 @@ An object of class Seurat
 Active assay: RNA (30983 features, 0 variable features)
  1 dimensional reduction calculated: umap
 ```
+
+Now you can use it for down stream analysis and visualisation
